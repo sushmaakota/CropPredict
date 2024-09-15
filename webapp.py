@@ -1,20 +1,20 @@
 ## Importing necessary libraries for the web app
 import streamlit as st
-import numpy as np
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-import pickle
-import os
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import classification_report
-from sklearn import metrics
-from sklearn import tree
-from sklearn.metrics import accuracy_score
-import warnings
-warnings.filterwarnings('ignore')
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
+# import numpy as np
+# import pandas as pd
+# from sklearn.ensemble import RandomForestClassifier
+# import pickle
+# import os
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+# from sklearn.metrics import classification_report
+# from sklearn import metrics
+# from sklearn import tree
+# from sklearn.metrics import accuracy_score
+# import warnings
+# warnings.filterwarnings('ignore')
+# from sklearn.model_selection import train_test_split
+# from sklearn.preprocessing import LabelEncoder
 
 # df= pd.read_csv('Crop_recommendation.csv')
 
