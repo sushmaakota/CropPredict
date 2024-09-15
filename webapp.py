@@ -3,7 +3,7 @@ import streamlit as st
 # import numpy as np
 # import pandas as pd
 # from sklearn.ensemble import RandomForestClassifier
-# import pickle
+import pickle
 # import os
 # import matplotlib.pyplot as plt
 # import seaborn as sns
