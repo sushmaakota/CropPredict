@@ -39,8 +39,8 @@ pickle.dump(RF, RF_Model_pkl)
 # Close the pickle instances
 RF_Model_pkl.close()
 
-model = pickle.load(open('RandomForest.pkl', 'rb'))
-RF_Model_pkl=pickle.load(open('RandomForest.pkl','rb'))
+model = pickle.load(open('RF.pkl', 'rb'))
+RF_Model_pkl=pickle.load(open('RF.pkl','rb'))
 
 ## Function to make predictions
 def predict_crop(nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall):
