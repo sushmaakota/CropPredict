@@ -6,7 +6,7 @@ import pandas as pd
 import os
 from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
-import seaborn as sns
+# import seaborn as sns
 from sklearn.metrics import classification_report
 from sklearn import metrics
 from sklearn import tree
