@@ -45,14 +45,31 @@ warnings.filterwarnings("ignore", message="Trying to unpickle estimator")
 # RF_Model_pkl.close()
 
 
-#model = pickle.load(open('RandomForest.pkl', 'rb'))
-RF_Model_pkl=pickle.load(open('RandomForest.pkl','rb'))
+
+# Check if the model file exists before loading
+if os.path.exists('RandomForest.pkl'):
+    with open('RandomForest.pkl', 'rb') as model_file:
+        RF_Model_pkl = pickle.load(model_file)
+else:
+    st.error("Model file not found. Please ensure 'RandomForest.pkl' is in the correct directory.")
 
 ## Function to make predictions
 def predict_crop(nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall):
-    # # Making predictions using the model
-    prediction = RF_Model_pkl.predict(np.array([nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall]).reshape(1, -1))
-    return prediction
+    try:
+        prediction = RF_Model_pkl.predict(np.array([nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall]).reshape(1, -1))
+        return prediction
+    except Exception as e:
+        st.error(f"An error occurred during prediction: {str(e)}")
+        return None
+
+# model = pickle.load(open('RandomForest.pkl', 'rb'))
+# RF_Model_pkl=pickle.load(open('RandomForest.pkl','rb'))
+
+# ## Function to make predictions
+# def predict_crop(nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall):
+#     # # Making predictions using the model
+#     prediction = RF_Model_pkl.predict(np.array([nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall]).reshape(1, -1))
+#     return prediction
 
 ## Streamlit code for the web app interface
 def main():  
