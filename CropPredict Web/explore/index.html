@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CropPredict : Weather and Soil based Crop Selector</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <h1>CropPredict : Weather and Soil based Crop Selector</h1>
+  </header>
+
+  <main>
+    <section id="model-intro">
+      <p>Our crop recommendation model leverages machine learning to analyze key factors such as soil nutrients, weather
+        conditions, and rainfall to provide informed agricultural decisions. By training multiple models, we've honed
+        the accuracy and precision of our recommendations, ensuring that you receive the best advice for your land.</p>
+    </section>
+
+    <section id="explore-crops">
+      <h2>Explore Optimal Crops</h2>
+      <p>Discover the ideal crops for your land by exploring the average conditions required for each crop. Our model
+        takes into account nitrogen, phosphorus, potassium levels, temperature, humidity, pH, and rainfall to suggest
+        the most suitable crops.</p>
+    </section>
+
+    <section id="crops-table">
+      <h3>Average Conditions for Crops</h3>
+      <table id="crop-table">
+        <thead>
+          <tr>
+            <th>Crop</th>
+            <th>Nitrogen</th>
+            <th>Phosphorus</th>
+            <th>Potassium</th>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+            <th>pH</th>
+            <th>Rainfall (mm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be inserted here by JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <section id="crop-recommendation-how-it-works">
+    <h2>How Crop Recommendation Works</h2>
+    <ol>
+      <li><strong>Data Input:</strong> Begin by entering details about your land, such as soil nutrient levels, weather
+        conditions, and historical rainfall data.</li> <br>
+      <li><strong>Model Analysis:</strong> Our machine learning model analyzes the data using sophisticated algorithms
+        to determine the most suitable crops for your land.</li> <br>
+      <li><strong>Recommendation:</strong> Receive a list of recommended crops along with detailed information about
+        their optimal growing conditions.</li>
+    </ol>
+  </section>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
